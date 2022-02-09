@@ -1,6 +1,6 @@
 #include "functions.h"
 
-// функции вывода пунктов меню
+// С„СѓРЅРєС†РёРё РІС‹РІРѕРґР° РїСѓРЅРєС‚РѕРІ РјРµРЅСЋ
 int menu()
 {
 	HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -17,10 +17,10 @@ int menu()
 
 	char menu_item[rows][columns];
 
-	strcpy_s(menu_item[0], convert_ANSI_string_to_ASCII_string("новая игра"));
-	strcpy_s(menu_item[1], convert_ANSI_string_to_ASCII_string("загрузить игру"));
-	strcpy_s(menu_item[2], convert_ANSI_string_to_ASCII_string("настройки"));
-	strcpy_s(menu_item[3], convert_ANSI_string_to_ASCII_string("выход"));
+	strcpy_s(menu_item[0], convert_ANSI_string_to_ASCII_string("РЅРѕРІР°СЏ РёРіСЂР°"));
+	strcpy_s(menu_item[1], convert_ANSI_string_to_ASCII_string("Р·Р°РіСЂСѓР·РёС‚СЊ РёРіСЂСѓ"));
+	strcpy_s(menu_item[2], convert_ANSI_string_to_ASCII_string("РЅР°СЃС‚СЂРѕР№РєРё"));
+	strcpy_s(menu_item[3], convert_ANSI_string_to_ASCII_string("РІС‹С…РѕРґ"));
 
 	X = 100;
 	Y = 25;
@@ -82,22 +82,22 @@ void color_selection(int& color)
 
 	char colors[length + 1][length];
 
-	strcpy_s(colors[0], convert_ANSI_string_to_ASCII_string("черный"));
-	strcpy_s(colors[1], convert_ANSI_string_to_ASCII_string("синий"));
-	strcpy_s(colors[2], convert_ANSI_string_to_ASCII_string("зеленый"));
-	strcpy_s(colors[3], convert_ANSI_string_to_ASCII_string("голубой"));
-	strcpy_s(colors[4], convert_ANSI_string_to_ASCII_string("красный"));
-	strcpy_s(colors[5], convert_ANSI_string_to_ASCII_string("розовый"));
-	strcpy_s(colors[6], convert_ANSI_string_to_ASCII_string("оранжевый"));
-	strcpy_s(colors[7], convert_ANSI_string_to_ASCII_string("светло серый"));
-	strcpy_s(colors[8], convert_ANSI_string_to_ASCII_string("серый"));
-	strcpy_s(colors[9], convert_ANSI_string_to_ASCII_string("светло синий"));
-	strcpy_s(colors[10], convert_ANSI_string_to_ASCII_string("светло зеленый"));
-	strcpy_s(colors[11], convert_ANSI_string_to_ASCII_string("светло голубой"));
-	strcpy_s(colors[12], convert_ANSI_string_to_ASCII_string("светло красный"));
-	strcpy_s(colors[13], convert_ANSI_string_to_ASCII_string("светло розовый"));
-	strcpy_s(colors[14], convert_ANSI_string_to_ASCII_string("желтый"));
-	strcpy_s(colors[15], convert_ANSI_string_to_ASCII_string("белый"));
+	strcpy_s(colors[0], convert_ANSI_string_to_ASCII_string("С‡РµСЂРЅС‹Р№"));
+	strcpy_s(colors[1], convert_ANSI_string_to_ASCII_string("СЃРёРЅРёР№"));
+	strcpy_s(colors[2], convert_ANSI_string_to_ASCII_string("Р·РµР»РµРЅС‹Р№"));
+	strcpy_s(colors[3], convert_ANSI_string_to_ASCII_string("РіРѕР»СѓР±РѕР№"));
+	strcpy_s(colors[4], convert_ANSI_string_to_ASCII_string("РєСЂР°СЃРЅС‹Р№"));
+	strcpy_s(colors[5], convert_ANSI_string_to_ASCII_string("СЂРѕР·РѕРІС‹Р№"));
+	strcpy_s(colors[6], convert_ANSI_string_to_ASCII_string("РѕСЂР°РЅР¶РµРІС‹Р№"));
+	strcpy_s(colors[7], convert_ANSI_string_to_ASCII_string("СЃРІРµС‚Р»Рѕ СЃРµСЂС‹Р№"));
+	strcpy_s(colors[8], convert_ANSI_string_to_ASCII_string("СЃРµСЂС‹Р№"));
+	strcpy_s(colors[9], convert_ANSI_string_to_ASCII_string("СЃРІРµС‚Р»Рѕ СЃРёРЅРёР№"));
+	strcpy_s(colors[10], convert_ANSI_string_to_ASCII_string("СЃРІРµС‚Р»Рѕ Р·РµР»РµРЅС‹Р№"));
+	strcpy_s(colors[11], convert_ANSI_string_to_ASCII_string("СЃРІРµС‚Р»Рѕ РіРѕР»СѓР±РѕР№"));
+	strcpy_s(colors[12], convert_ANSI_string_to_ASCII_string("СЃРІРµС‚Р»Рѕ РєСЂР°СЃРЅС‹Р№"));
+	strcpy_s(colors[13], convert_ANSI_string_to_ASCII_string("СЃРІРµС‚Р»Рѕ СЂРѕР·РѕРІС‹Р№"));
+	strcpy_s(colors[14], convert_ANSI_string_to_ASCII_string("Р¶РµР»С‚С‹Р№"));
+	strcpy_s(colors[15], convert_ANSI_string_to_ASCII_string("Р±РµР»С‹Р№"));
 
 	increment = figure + 2;
 
@@ -124,14 +124,14 @@ void color_selection(int& color)
 		std::cout << horizontal_border;
 	std::cout << bottom_right_corner << std::endl;
 
-	std::cout << convert_ANSI_string_to_ASCII_string("введите порядковый номер цвета: ");
+	std::cout << convert_ANSI_string_to_ASCII_string("РІРІРµРґРёС‚Рµ РїРѕСЂСЏРґРєРѕРІС‹Р№ РЅРѕРјРµСЂ С†РІРµС‚Р°: ");
 	std::cin >> index;
 
 	system("cls");
 
 	color = 0x000 + --index;
 }
-// функции расстановки кораблей
+// С„СѓРЅРєС†РёРё СЂР°СЃСЃС‚Р°РЅРѕРІРєРё РєРѕСЂР°Р±Р»РµР№
 void auto_placement(field& _field)
 {
 	srand(time(NULL));
@@ -380,7 +380,7 @@ bool placement_permission(field& _field, const int& x, const int& y, const size_
 
 	return returned_value;
 }
-// функции стрельбы
+// С„СѓРЅРєС†РёРё СЃС‚СЂРµР»СЊР±С‹
 int shoot_player(field& _field_cpu, field& _field_player_empty)
 {
 	static int parts = 1;
@@ -391,10 +391,10 @@ int shoot_player(field& _field_cpu, field& _field_player_empty)
 	int returned_value = 0;
 
 	console_cursor(0, 32);
-	std::cout << convert_ANSI_string_to_ASCII_string("введите координату по оси x: ");
+	std::cout << convert_ANSI_string_to_ASCII_string("ГўГўГҐГ¤ГЁГІГҐ ГЄГ®Г®Г°Г¤ГЁГ­Г ГІГі ГЇГ® Г®Г±ГЁ x: ");
 	std::cin >> x;
 	X = columns_indexes[static_cast<int>(x) - 65];
-	std::cout << convert_ANSI_string_to_ASCII_string("введите координату по оси y: ");
+	std::cout << convert_ANSI_string_to_ASCII_string("ГўГўГҐГ¤ГЁГІГҐ ГЄГ®Г®Г°Г¤ГЁГ­Г ГІГі ГЇГ® Г®Г±ГЁ y: ");
 	std::cin >> Y;
 	Y = rows_indexes[Y - 1];
 
@@ -434,7 +434,7 @@ int ship_parts(const field& _field, const int& x, const int& y)
 	int left = 0;
 	int right = 0;
 
-	// ось X
+	// РѕСЃСЊ X
 	if (x == columns_indexes[NULL])
 	{
 		right = x + step_col;
@@ -450,7 +450,7 @@ int ship_parts(const field& _field, const int& x, const int& y)
 		right = x + step_col;
 		left = x - step_col;
 	}
-	// ось Y
+	// РѕСЃСЊ Y
 	if (y == rows_indexes[NULL])
 	{
 		down = y + step_row;
@@ -466,7 +466,7 @@ int ship_parts(const field& _field, const int& x, const int& y)
 		up = y - step_row;
 		down = y + step_row;
 	}
-	// проверка близлежащих координат
+	// РїСЂРѕРІРµСЂРєР° Р±Р»РёР·Р»РµР¶Р°С‰РёС… РєРѕРѕСЂРґРёРЅР°С‚
 	if (static_cast<unsigned char>(_field.view[up][x]) == ship_part)
 		++returned_value;
 	if (static_cast<unsigned char>(_field.view[down][x]) == ship_part)
@@ -522,7 +522,7 @@ RowSelection:
 		goto RowSelection;
 	}
 }
-//
+// !!!!! РќР• РЎРњРћРўР Р•РўР¬ !!!!! РќРђР§РђР›Рћ
 bool shoot_cpu(field& _field_player, field& _field_cpu_empty)
 {
 	static bool Initialization = true;
@@ -537,8 +537,8 @@ bool shoot_cpu(field& _field_player, field& _field_cpu_empty)
 
 	int length;
 	   // ################################################## //
-	  //********* инициализация двумерного массива *********//
-	 //********* координатами отресумого поля *************//
+	  //********* ГЁГ­ГЁГ¶ГЁГ Г«ГЁГ§Г Г¶ГЁГї Г¤ГўГіГ¬ГҐГ°Г­Г®ГЈГ® Г¬Г Г±Г±ГЁГўГ  *********//
+	 //********* ГЄГ®Г®Г°Г¤ГЁГ­Г ГІГ Г¬ГЁ Г®ГІГ°ГҐГ±ГіГ¬Г®ГЈГ® ГЇГ®Г«Гї *************//
 	// ################################################## //
 	if (Initialization)
 	{
@@ -552,13 +552,13 @@ bool shoot_cpu(field& _field_player, field& _field_cpu_empty)
 		Initialization = false;
 	}
 	  // ################################################# //
-	 //********************** конец **********************//
+	 //********************** ГЄГ®Г­ГҐГ¶ **********************//
 	// ################################################# //
 
 	static bool random = true;
 
 	  // ################################################# //
-	 //**************** случайный выстрел ****************//
+	 //**************** Г±Г«ГіГ·Г Г©Г­Г»Г© ГўГ»Г±ГІГ°ГҐГ« ****************//
 	// ################################################# //
 	if (random)
 	{
@@ -583,13 +583,13 @@ bool shoot_cpu(field& _field_player, field& _field_cpu_empty)
 		}
 	}
 	 // ################################################# //
-	//********************** конец **********************//
+	//********************** ГЄГ®Г­ГҐГ¶ **********************//
    // ################################################# //
 
 
 
 	  // ################################################# //
-	 //**************** прицельный выстрел ***************//
+	 //**************** ГЇГ°ГЁГ¶ГҐГ«ГјГ­Г»Г© ГўГ»Г±ГІГ°ГҐГ« ***************//
 	// ################################################# //
 	else
 	{
@@ -690,7 +690,7 @@ int shoot_aimed(field& _field_player, int& X, int& Y, const static int& hit)
 					directions[index] = -1;
 					return 0;
 				}
-				// координата по оси Y
+				// ГЄГ®Г®Г°Г¤ГЁГ­Г ГІГ  ГЇГ® Г®Г±ГЁ Y
 			}
 			else
 			{
@@ -713,7 +713,7 @@ int shoot_aimed(field& _field_player, int& X, int& Y, const static int& hit)
 					directions[index] = -1;
 					return 0;
 				}
-				// координата по оси Х
+				// ГЄГ®Г®Г°Г¤ГЁГ­Г ГІГ  ГЇГ® Г®Г±ГЁ Г•
 			}
 		}
 		else
@@ -892,7 +892,10 @@ int length_int_array(const static unsigned int* array)
 
 	return length;
 }
-// функции преобразования строки с русскими символами для правильного вывода в консоли
+// !!!!! РќР• РЎРњРћРўР Р•РўР¬ !!!!! РљРћРќР•Р¦
+
+
+// С„СѓРЅРєС†РёРё РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ СЃС‚СЂРѕРєРё СЃ СЂСѓСЃСЃРєРёРјРё СЃРёРјРІРѕР»Р°РјРё РґР»СЏ РїСЂР°РІРёР»СЊРЅРѕРіРѕ РІС‹РІРѕРґР° РІ РєРѕРЅСЃРѕР»Рё
 char* convert_ANSI_string_to_ASCII_string(const char string[])
 {
 	char* _new_string = new char[strlen(string) + 2];
@@ -942,9 +945,9 @@ char* convert_ANSI_string_to_ASCII_string(char string[])
 
 	return _new_string;
 }
-// ну удаление //
+// РЅР° СѓРґР°Р»РµРЅРёРµ //
 // ### END ### //
-// ну удаление //
+// РЅР° СѓРґР°Р»РµРЅРёРµ //
 void draw_border(const int& x, const int& y)
 {
 	HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -954,9 +957,9 @@ void draw_border(const int& x, const int& y)
 	int color_border = 0x0000;
 	int color_background = 0x0000;
 
-	std::cout << convert_ANSI_string_to_ASCII_string("цвет границы\n");
+	std::cout << convert_ANSI_string_to_ASCII_string("Г¶ГўГҐГІ ГЈГ°Г Г­ГЁГ¶Г»\n");
 	color_selection(color_border);
-	std::cout << convert_ANSI_string_to_ASCII_string("цвет фона границы\n");
+	std::cout << convert_ANSI_string_to_ASCII_string("Г¶ГўГҐГІ ГґГ®Г­Г  ГЈГ°Г Г­ГЁГ¶Г»\n");
 	color_selection(color_background);
 
 	color_background <<= shift;
