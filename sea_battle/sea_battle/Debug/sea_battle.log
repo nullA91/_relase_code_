@@ -1,0 +1,7 @@
+﻿  main.cpp
+c:\projects\c++\itstep\03.examwork\sea_battle\sea_battle\constants.h(28): warning C4309: 'static_cast': truncation of constant value
+c:\projects\c++\itstep\03.examwork\sea_battle\sea_battle\functions.h(22): warning C4042: 'hit': has bad storage class
+c:\projects\c++\itstep\03.examwork\sea_battle\sea_battle\functions.h(24): warning C4042: 'array': has bad storage class
+c:\projects\c++\itstep\03.examwork\sea_battle\sea_battle\main.cpp(7): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  sea_battle.vcxproj -> C:\Projects\C++\ItStep\03.ExamWork\sea_battle\Debug\sea_battle.exe
+  sea_battle.vcxproj -> C:\Projects\C++\ItStep\03.ExamWork\sea_battle\Debug\sea_battle.pdb (Partial PDB)
