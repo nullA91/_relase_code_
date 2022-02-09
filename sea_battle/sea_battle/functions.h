@@ -6,26 +6,26 @@
 #include "libraries.h"
 #include "structures.h"
 
-// функции вывода пунктов меню
-int menu(); // функция вывода пунктов меню при старте игры(возвращает порядковую целочисленную позицию пункта меню)
-void color_selection(int& color); // функция вывода вариантов выбора цвета
-// функции расстановки кораблей
-void manually_placement(field& _field); // функция расстановки кораблей в ручную
-void auto_placement(field& _field); // функция расстановки кораблей автоматически
-bool placement_permission(field& _field, const int& x, const int& y, const size_t& ship_size, bool orientation); // функция выдает разрешение на размещение корабля в указанной позиции(чтобы корабли не прилегали друг к другу)
-// функции стрельбы
-int shoot_player(field& _field_cpu, field& _field_player_empty); // функция стрельбы игрока
-int ship_parts(const field& _field_cpu, const int& x, const int& y); // функция определения оставшихся частей корабля до его потопления
+// С„СѓРЅРєС†РёРё РІС‹РІРѕРґР° РїСѓРЅРєС‚РѕРІ РјРµРЅСЋ
+int menu(); // С„СѓРЅРєС†РёСЏ РІС‹РІРѕРґР° РїСѓРЅРєС‚РѕРІ РјРµРЅСЋ РїСЂРё СЃС‚Р°СЂС‚Рµ РёРіСЂС‹(РІРѕР·РІСЂР°С‰Р°РµС‚ РїРѕСЂСЏРґРєРѕРІСѓСЋ С†РµР»РѕС‡РёСЃР»РµРЅРЅСѓСЋ РїРѕР·РёС†РёСЋ РїСѓРЅРєС‚Р° РјРµРЅСЋ)
+void color_selection(int& color); // С„СѓРЅРєС†РёСЏ РІС‹РІРѕРґР° РІР°СЂРёР°РЅС‚РѕРІ РІС‹Р±РѕСЂР° С†РІРµС‚Р°
+// С„СѓРЅРєС†РёРё СЂР°СЃСЃС‚Р°РЅРѕРІРєРё РєРѕСЂР°Р±Р»РµР№
+void manually_placement(field& _field); // С„СѓРЅРєС†РёСЏ СЂР°СЃСЃС‚Р°РЅРѕРІРєРё РєРѕСЂР°Р±Р»РµР№ РІ СЂСѓС‡РЅСѓСЋ
+void auto_placement(field& _field); // С„СѓРЅРєС†РёСЏ СЂР°СЃСЃС‚Р°РЅРѕРІРєРё РєРѕСЂР°Р±Р»РµР№ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё
+bool placement_permission(field& _field, const int& x, const int& y, const size_t& ship_size, bool orientation); // С„СѓРЅРєС†РёСЏ РІС‹РґР°РµС‚ СЂР°Р·СЂРµС€РµРЅРёРµ РЅР° СЂР°Р·РјРµС‰РµРЅРёРµ РєРѕСЂР°Р±Р»СЏ РІ СѓРєР°Р·Р°РЅРЅРѕР№ РїРѕР·РёС†РёРё(С‡С‚РѕР±С‹ РєРѕСЂР°Р±Р»Рё РЅРµ РїСЂРёР»РµРіР°Р»Рё РґСЂСѓРі Рє РґСЂСѓРіСѓ)
+// С„СѓРЅРєС†РёРё СЃС‚СЂРµР»СЊР±С‹
+int shoot_player(field& _field_cpu, field& _field_player_empty); // С„СѓРЅРєС†РёСЏ СЃС‚СЂРµР»СЊР±С‹ РёРіСЂРѕРєР°
+int ship_parts(const field& _field_cpu, const int& x, const int& y); // С„СѓРЅРєС†РёСЏ РѕРїСЂРµРґРµР»РµРЅРёСЏ РѕСЃС‚Р°РІС€РёС…СЃСЏ С‡Р°СЃС‚РµР№ РєРѕСЂР°Р±Р»СЏ РґРѕ РµРіРѕ РїРѕС‚РѕРїР»РµРЅРёСЏ
 // CPU ??
-void shoot_random(int& X, int& Y); // функция стрельбы cpu
+void shoot_random(int& X, int& Y); // С„СѓРЅРєС†РёСЏ СЃС‚СЂРµР»СЊР±С‹ cpu
 //aimed_shot();
 int shoot_aimed(field& _field_player, int& X, int& Y, const static int& hit);
 bool shoot_cpu(field& _field_player, field& _field_cpu_empty);
 int length_int_array(const static unsigned int* array);
-// функции преобразования строки с русскими символами для правильного вывода в консоли
-char* convert_ANSI_string_to_ASCII_string(const char string[]); // функция конвертации ANSI строки в строку формата ASCII пренимающая константную строку
-char* convert_ANSI_string_to_ASCII_string(char string[]); // функция конвертации ANSI строки в строку формата ASCII пренимающая неконстантную строку
-// ну удаление //
+// С„СѓРЅРєС†РёРё РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ СЃС‚СЂРѕРєРё СЃ СЂСѓСЃСЃРєРёРјРё СЃРёРјРІРѕР»Р°РјРё РґР»СЏ РїСЂР°РІРёР»СЊРЅРѕРіРѕ РІС‹РІРѕРґР° РІ РєРѕРЅСЃРѕР»Рё
+char* convert_ANSI_string_to_ASCII_string(const char string[]); // С„СѓРЅРєС†РёСЏ РєРѕРЅРІРµСЂС‚Р°С†РёРё ANSI СЃС‚СЂРѕРєРё РІ СЃС‚СЂРѕРєСѓ С„РѕСЂРјР°С‚Р° ASCII РїСЂРµРЅРёРјР°СЋС‰Р°СЏ РєРѕРЅСЃС‚Р°РЅС‚РЅСѓСЋ СЃС‚СЂРѕРєСѓ
+char* convert_ANSI_string_to_ASCII_string(char string[]); // С„СѓРЅРєС†РёСЏ РєРѕРЅРІРµСЂС‚Р°С†РёРё ANSI СЃС‚СЂРѕРєРё РІ СЃС‚СЂРѕРєСѓ С„РѕСЂРјР°С‚Р° ASCII РїСЂРµРЅРёРјР°СЋС‰Р°СЏ РЅРµРєРѕРЅСЃС‚Р°РЅС‚РЅСѓСЋ СЃС‚СЂРѕРєСѓ
+// РЅР° СѓРґР°Р»РµРЅРёРµ //
 // ### END ### //
-// ну удаление //
-void draw_border(const int& x, const int& y); // функция не используется
+// РЅР° СѓРґР°Р»РµРЅРёРµ //
+void draw_border(const int& x, const int& y); // С„СѓРЅРєС†РёСЏ РЅРµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ
