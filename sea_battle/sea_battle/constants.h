@@ -2,32 +2,32 @@
 
 const unsigned int size = 10;
 
-const unsigned int step_row = 3; // шаг строки
-const unsigned int step_col = 5; // шаг столбца
+const unsigned int step_row = 3; // С€Р°Рі СЃС‚СЂРѕРєРё
+const unsigned int step_col = 5; // С€Р°Рі СЃС‚РѕР»Р±С†Р°
 
-const unsigned int rows_indexes[size] = { 1, 4, 7, 10, 13, 16, 19, 22, 25, 28 }; // массив содержащий индексы строк(видимого игрового поля)
-const unsigned int columns_indexes[size] = { 2, 7, 12, 17, 22, 27, 32, 37, 42, 47 }; // массив содержащий индексы столбцов(видимого игрового поля)
+const unsigned int rows_indexes[size] = { 1, 4, 7, 10, 13, 16, 19, 22, 25, 28 }; // РјР°СЃСЃРёРІ СЃРѕРґРµСЂР¶Р°С‰РёР№ РёРЅРґРµРєСЃС‹ СЃС‚СЂРѕРє(РІРёРґРёРјРѕРіРѕ РёРіСЂРѕРІРѕРіРѕ РїРѕР»СЏ)
+const unsigned int columns_indexes[size] = { 2, 7, 12, 17, 22, 27, 32, 37, 42, 47 }; // РјР°СЃСЃРёРІ СЃРѕРґРµСЂР¶Р°С‰РёР№ РёРЅРґРµРєСЃС‹ СЃС‚РѕР»Р±С†РѕРІ(РІРёРґРёРјРѕРіРѕ РёРіСЂРѕРІРѕРіРѕ РїРѕР»СЏ)
 
-																					 // alt символы верхних углов
-const unsigned char top_left_corner = 201; // alt символ верхнего левого угла
-const unsigned char top_right_corner = 187; // alt символ верхнего правого угла
-											// alt символы нижних углов
-const unsigned char bottom_left_corner = 200; // alt символ нижнего левого угла
-const unsigned char bottom_right_corner = 188; // alt символ нижнего правого угла
-											   // alt символ верхней и нижней границы
+// alt СЃРёРјРІРѕР»С‹ РІРµСЂС…РЅРёС… СѓРіР»РѕРІ																					 // alt Г±ГЁГ¬ГўГ®Г«Г» ГўГҐГ°ГµГ­ГЁГµ ГіГЈГ«Г®Гў
+const unsigned char top_left_corner = 201; // alt СЃРёРјРІРѕР» РІРµСЂС…РЅРµРіРѕ Р»РµРІРѕРіРѕ СѓРіР»Р°
+const unsigned char top_right_corner = 187; // alt СЃРёРјРІРѕР» РІРµСЂС…РЅРµРіРѕ РїСЂР°РІРѕРіРѕ СѓРіР»Р°
+// alt СЃРёРјРІРѕР»С‹ РЅРёР¶РЅРёС… СѓРіР»РѕРІ											
+const unsigned char bottom_left_corner = 200; // alt СЃРёРјРІРѕР» РЅРёР¶РЅРµРіРѕ Р»РµРІРѕРіРѕ СѓРіР»Р°
+const unsigned char bottom_right_corner = 188; // alt СЃРёРјРІРѕР» РЅРёР¶РЅРµРіРѕ РїСЂР°РІРѕРіРѕ СѓРіР»Р°
+// alt СЃРёРјРІРѕР» РІРµСЂС…РЅРµР№ Рё РЅРёР¶РЅРµР№ РіСЂР°РЅРёС†С‹											   
 const unsigned char horizontal_border = 205;
-// alt символ левой и правой границы
+// alt СЃРёРјРІРѕР» Р»РµРІРѕР№ Рё РїСЂР°РІРѕР№ РіСЂР°РЅРёС†С‹
 const unsigned char vertical_border = 186;
 
-// символ пробела
+// СЃРёРјРІРѕР» РїСЂРѕР±РµР»Р°
 const unsigned char space = 32;
-// клавиша enter
+// РєР»Р°РІРёС€Р° enter
 const unsigned char enter = 13;
 
-// символ части корабля
+// СЃРёРјРІРѕР» С‡Р°СЃС‚Рё РєРѕСЂР°Р±Р»СЏ
 const unsigned char ship_part = static_cast<char>(254);
 
-// стрелки на клавиатуре
+// СЃС‚СЂРµР»РєРё РЅР° РєР»Р°РІРёР°С‚СѓСЂРµ
 const signed char arrows = -32;
 
 const unsigned char up = 72;
